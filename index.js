@@ -1,5 +1,11 @@
 const express = require("express");
 const app = express();
+const body_Parser = require("body-parser");
+const bodyParser = body_Parser.urlencoded({ extended: false });
+const productRouter = require("./routes/Products");
+
+app.use(bodyParser);
+app.use("/products", productRouter);
 
 //GET /products/all HTTP/1.1
 //Page: 2
