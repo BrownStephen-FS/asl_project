@@ -1,12 +1,30 @@
 const express = require("express");
 const app = express();
-const body_Parser = require("body-parser");
-const bodyParser = body_Parser.urlencoded({ extended: false });
+//const body_Parser = require("body-parser");
+//const bodyParser = body_Parser.urlencoded({ extended: false });
 const productRouter = require("./routes/Products");
 
-app.use(bodyParser);
-app.use("/products", productRouter);
+app.set("views", __dirname + "/templates/views");
+app.set("view engine", "twig");
 
+app.get("/", (req, res) => {
+  res.render("home", {
+    name: "World!",
+    users: [
+      { name: "Stephen Brown", email: "sbrown2@student.fullsail.edu" },
+      { name: "Brittany Brown", email: "bbrown@email.com" },
+      { name: "Connor Brown", email: "cbrown@email.com" },
+      { name: "Lacey Brown", email: "lbrown@email.com" },
+    ],
+  });
+});
+
+//app.use(bodyParser);
+app.use("/products", productRouter);
+app.listen(3000);
+
+//comenting out old code for future reference.
+/*
 //GET /products/all HTTP/1.1
 //Page: 2
 //Sort: price
@@ -27,5 +45,4 @@ app.get("/products/:num-:size-:color", (req, res) => {
 app.get("/products/:num", (req, res) => {
   res.send(`GET Products: ${req.params.num}`);
 });
-
-app.listen(3000);
+*/

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ASL Project - {% block title %}Home{% endblock %}</title>
+    </head>
+    <body>
+        {% include "../partials/_header.twig" %}
+        <h1>Hello World!</h1>
+        {% block main_content %}{% endblock %}
+        {% block scripts %}{% endblock %}
+        {% include "../partials/_footer.twig" %}
+    </body>
+</html>

@@ -8,3 +8,6 @@
 🆔 &nbsp; 0004850349
 
 📪 &nbsp; sabrown2@student.fullsail.edu
+
+## To start: node index.js
+## To stop: control+c
