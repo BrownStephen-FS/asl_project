@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Variants', {
+    await queryInterface.createTable('Products', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -18,18 +18,17 @@ module.exports = {
       },
       description: {
         type: Sequelize.TEXT('long'),
+        defaultValue: '(Not Provided)',
         allowNull: false
       },
       price: {
         type: Sequelize.FLOAT,
+        defaultValue: 0.00,
         allowNull: false
       },
-      inventory: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      productId: {
-        type: Sequelize.INTEGER,
+      is_published: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       createdAt: {
@@ -43,6 +42,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Variants');
+    await queryInterface.dropTable('Products');
   }
 };

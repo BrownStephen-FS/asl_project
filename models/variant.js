@@ -11,13 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.Variant.hasMany(models.Image)
+      models.Variant.belongsTo(models.Product)
     }
   }
   Variant.init({
     title: DataTypes.STRING,
-    slug: DataTypes.STRING,
-    description: DataTypes.TEXT,
     price: DataTypes.FLOAT,
+    slug: DataTypes.STRING,
+    description: DataTypes.TEXT('long'),
     inventory: DataTypes.INTEGER,
     productId: DataTypes.INTEGER
   }, {
