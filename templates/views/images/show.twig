@@ -1,0 +1,15 @@
+{% extends "../../layouts/base.twig" %}
+
+{% block main_content %}
+    <h2>About Image {{image.title}}:</h2>
+    <ol>
+        <li>
+            <label>Id: </label> {{ image.id }}
+            <br>
+            <label>Assigned Variant: </label> {{ variant.title }}
+        </li>
+    </ol>
+    <p>
+        <a href="/images/{{ image.id }}/edit">Edit</a> | <a href="/images/{{ image.id }}/delete">Delete</a>
+    </p>
+{% endblock %}
