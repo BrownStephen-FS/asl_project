@@ -1,25 +1,11 @@
 {% extends "../layouts/base.twig" %}
 {% block main_content %}
-    <p>This content is coming from templates/views/home.twig</p>
+	<h1>Manage</h1>
+	<nav>
+		<ul>
+			<li><a href="/products">Products</a></li>
+			<li><a href="/variants">Variants</a></li>
+			<li><a href="/images">Images</a></li>
+		</ul>
+	</nav>
 {% endblock %}
-
-{% block scripts %}
-    <p>Scripts are loaded</p>
-    <script>
-        alert("Hello World!");
-    </script>
-{% endblock %}
-
-{% block title %}Home View{% endblock %}
-
-{# Commenting out old code for future reference. #}
-{#<h1>Hello {{ name }}</h1>
-<ul>
-    {% for user in users %}
-    <li>
-        <label>name: </label>{{user.name}}
-        <br />
-        <label>email: </label>{{user.email}}
-    </li>
-    {% endfor %}
-</ul>#}

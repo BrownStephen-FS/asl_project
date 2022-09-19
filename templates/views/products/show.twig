@@ -1,11 +1,16 @@
 {% extends "../../layouts/base.twig" %}
 
 {% block main_content %}
+    <h2>About {{product.title}}:</h2>
     <ol>
         <li>
             <label>Id: </label> {{ product.id }}
             <br>
-            <label>Name: </label> {{ product.name }}
+            <label>Name: </label> {{ product.title }}
+            <br>
+            <label>Slug: </label> {{ product.slug }}
+            <br>
+            <label>Description: </label> {{ product.description }}
             <br>
             <label>Price: </label> {{ product.price }}
         </li>
