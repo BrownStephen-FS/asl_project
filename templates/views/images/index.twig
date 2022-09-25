@@ -1,15 +1,19 @@
 {% extends "../../layouts/base.twig" %}
 
 {% block main_content %}
-    <h2>All Products:</h2>
-    <ul>
-        {% for image in images %}
-            <li>
-                {{ image.id }} - 
-                <a href="/images/{{ image.id }}">Edit</a>
-                <a href="/images/{{ image.id }}/delete">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <a href="/images/new">Create new Image</a>
+	<h2>All Products:</h2>
+	<div id="allImagesContainer">
+		<ul>
+			{% for image in images %}
+				<li>
+					<a href="/images/{{ image.id }}">{{ image.id }}</a>
+					{{ image.id }}
+					-
+					<a href="/images/{{ image.id }}" class="editDeleteCreateNew">Edit</a>
+					<a href="/images/{{ image.id }}/delete" class="editDeleteCreateNew">Delete</a>
+				</li>
+			{% endfor %}
+		</ul>
+        <a href="/images/new" class="editDeleteCreateNew">Create new Image</a>
+	</div>
 {% endblock %}

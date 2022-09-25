@@ -1,26 +1,29 @@
-<form method="POST" action="/variants/{% if variant.id %}{{ variant.id }}{% endif %}">
+<form method="POST" action="/variants/{% if variant.id %}{{ variant.id }}{% endif %}" class="formContainer">
     {% if variant.id %}
         <input type="hidden" name="id" value="{{ variant.id }}"/>
     {% endif %}
     <div>
-        <label for="title">Title:</label>
+        <label for="title" class="formLabel">Title: </label>
         <input type="text" name="title" id="title" value="{{ variant.title }}"/>
     </div>
+    <br>
     <div>
-        <label for="slug">Slug:</label>
+        <label for="slug" class="formLabel">Slug: </label>
         <input type="text" name="slug" id="slug" value="{{ variant.slug }}"/>
     </div>
+    <br>
     <div>
-        <label for="description">Description:</label>
+        <label for="description" class="formLabel">Description: </label>
         <input type="text" name="description" id="description" value="{{ variant.description }}"/>
     </div>
+    <br>
     <div>
-        <label for="price">Price:</label>
+        <label for="price" class="formLabel">Price: </label>
         <input type="text" name="price" id="price" value="{{ variant.price }}"/>
     </div>
-    
+    <br>
     <div>
-        <label for="productId">Product:</label>
+        <label for="productId" class="formLabel">Product: </label>
         <select name="productId">
             {% for product in products %}
                 <option value="{{ product.id }}" 
@@ -30,7 +33,7 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="submitButton">
         <input type="submit" type="submit" />
     </div>
 </form>

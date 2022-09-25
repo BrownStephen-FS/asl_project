@@ -1,11 +1,19 @@
 {% extends "../layouts/base.twig" %}
 {% block main_content %}
 	<h1>Manage</h1>
-	<nav>
-		<ul>
-			<li><a href="/products">Products</a></li>
-			<li><a href="/variants">Variants</a></li>
-			<li><a href="/images">Images</a></li>
-		</ul>
+	<nav id="pageLinksContainer">
+		<a href="/products" class="pageLinks">Manage Products</a>
+		<a href="/variants" class="pageLinks">Manage Variants</a>
+		<a href="/images" class="pageLinks">Manage Images</a>
 	</nav>
-{% endblock %}
+	<img src="../../public/images/backgroundImage.png" alt="nikeLogo" id="mainPageBackground"></img>
+<div id="productContainer">
+	<div id="product1">
+		<a href="/products/1" class="productLink"><img src="../../public/images/1.png" alt="nikeShoe1" width="350px" height="200px"></img>
+	</a>
+	<h3>$102.36</h3>
+</div>
+<div id="product2">
+	<a href="/products/2" class="productLink"><img src="../../public/images/2.png" alt="nikeShoe2" width="350px" height="200px"></img>
+</a>
+<h3>$210.56</h3></div></div>{% endblock %}

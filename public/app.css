@@ -1,0 +1,137 @@
+/*
+colors found on this webpage https://www.canva.com/learn/website-color-schemes/
+Sky blue #CAEBF2
+Carbon grey #A9A9A9
+Warm Peach #cd5360
+Neutral? #EFEFEF
+*/
+header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  background-color: #438496;
+}
+#headerLinksContainer {
+  display: flex;
+  flex-direction: row;
+}
+.headerLink {
+  margin: 1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #EFEFEF;
+}
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#mainPageBackground {
+  opacity: 0.1;
+}
+h1, h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #cd5360;
+}
+h1::selection {
+  color: #a9a9a9;
+  background-color: #caebf2;
+}
+#pageLinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.pageLinks {
+  text-decoration: none;
+  margin: 1rem;
+  color: #a9a9a9;
+}
+.pageLinks:hover, .headerLink:hover {
+  color: #cd5360;
+}
+#productContainer {
+  display: flex;
+  flex-direction: row;
+}
+.productLink {
+  margin: 1rem;
+}
+#product1, #product2 {
+  border: solid 2px #438496;
+  border-radius: 10px;
+  margin: 1rem 1rem 1rem 18rem;
+  padding: 1rem;
+  text-align: center;
+  color: #a9a9a9;
+}
+#product1:hover, #product2:hover {
+  box-shadow: 5px 5px #438496;
+  border: solid 2px #cd5360;
+}
+#product {
+  border: solid 2px #438496;
+  border-radius: 10px;
+  margin: 20rem 30rem;
+  padding: 2rem;
+  max-width: 50rem;
+  color: #a9a9a9;
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  50% {
+    box-shadow: 10px 10px 10px #cd5360;
+  }
+}
+label {
+  font-weight: bolder;
+}
+p {
+  text-align: end;
+}
+.editDeleteCreateNew {
+  text-decoration: none;
+  color: #438496;
+}
+.editDeleteCreateNew:hover {
+  color: #cd5360;
+}
+#allProductsContainer, #allVariantsContainer, #allImagesContainer {
+  padding: 3rem;
+  margin: 5rem 5rem 5rem 45rem;
+  display: flex;
+  flex-direction: column;
+}
+.formContainer {
+  padding: 2rem;
+  margin: 10rem 2rem 2rem 45rem;
+  border: solid 2px #cd5360;
+  border-radius: 5px;
+  background-color: #EFEFEF;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+}
+.formLabel {
+  display: inline-block;
+  width: 150px;
+  text-align: right; 
+}
+.submitButton{
+  padding: 1rem;
+  text-align: right;
+}
+footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #438496;
+  color: #EFEFEF;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
