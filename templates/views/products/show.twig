@@ -1,21 +1,38 @@
 {% extends "../../layouts/base.twig" %}
 
 {% block main_content %}
-    <h2>About {{product.title}}:</h2>
-    <ol>
-        <li>
-            <label>Id: </label> {{ product.id }}
-            <br>
-            <label>Name: </label> {{ product.title }}
-            <br>
-            <label>Slug: </label> {{ product.slug }}
-            <br>
-            <label>Description: </label> {{ product.description }}
-            <br>
-            <label>Price: </label> {{ product.price }}
-        </li>
-    </ol>
-    <p>
-        <a href="/products/{{ product.id }}/edit">Edit</a> | <a href="/products/{{ product.id }}/delete">Delete</a>
-    </p>
-{% endblock %}
+	<h2>About
+		{{product.title}}:
+	</h2>
+	<div id="product">
+		<img src="../../public/images/1.png" alt="nikeShoe1" width="350px" height="200px"></img>
+	<br>
+	<label>Id:
+	</label>
+	{{ product.id }}
+	<br>
+	<br>
+	<label>Name:
+	</label>
+	{{ product.title }}
+	<br>
+	<br>
+	<label>Slug:
+	</label>
+	{{ product.slug }}
+	<br>
+	<br>
+	<label>Description:
+	</label>
+	{{ product.description }}
+	<br>
+	<br>
+	<label>Price:
+	</label>
+	{{ product.price }}
+	<p>
+		<a href="/products/{{ product.id }}/edit" class="editDeleteCreateNew">Edit</a>
+		|
+		<a href="/products/{{ product.id }}/delete" class="editDeleteCreateNew">Delete</a>
+	</p>
+</div>{% endblock %}
